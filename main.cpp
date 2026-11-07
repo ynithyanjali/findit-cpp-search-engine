@@ -10,6 +10,7 @@ int main() {
         "C++ is useful for building fast programs",
         "Search engines help find information",
         "Python and C++ are programming languages"
+        "Data Structures are important in C++"
     };
 
     std::string keyword;
