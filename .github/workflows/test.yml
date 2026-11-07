@@ -1,0 +1,25 @@
+
+name: C++ Build and Test
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Compile C++
+        run: g++ -std=c++17 -Wall -Wextra -o findit main.cpp
+
+      - name: Test search engine
+        run: |
+          printf "Python\n" | ./findit | tee output.txt
+          grep -q "Total matches: 2" output.txt
