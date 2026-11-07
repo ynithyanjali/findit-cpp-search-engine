@@ -9,7 +9,7 @@ int main() {
         "Python is used for data analysis",
         "C++ is useful for building fast programs",
         "Search engines help find information",
-        "Python and C++ are programming languages"
+        "Python and C++ are programming languages",
         "Data Structures are important in C++"
     };
 
