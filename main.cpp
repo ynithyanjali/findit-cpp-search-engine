@@ -2,7 +2,17 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <cctype>
 
+
+std::string toLower(std::string text) {
+    for (char& letter : text) {
+        letter = static_cast<char>(
+            std::tolower(static_cast<unsigned char>(letter))
+        );
+    }
+    return text;
+}
 int main() {
 
     std::vector<std::string> documents = {
@@ -24,10 +34,10 @@ int main() {
         std::cout << "Please enter a keyword.\n";
         return 1;
     }
-
+    std::string lowerKeyword = toLower(keyword);
     for (const std::string& document : documents) {
 
-        if (document.find(keyword) != std::string::npos) {
+       if (toLower(document).find(lowerKeyword) != std::string::npos) {{
             std::cout << "Found: " << document << "\n";
             matches++;
         }
