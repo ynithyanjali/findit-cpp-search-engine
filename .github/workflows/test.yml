@@ -23,3 +23,12 @@ jobs:
         run: |
           printf "Python\n" | ./findit | tee output.txt
           grep -q "Total matches: 2" output.txt
+
+          printf "python\n" | ./findit | tee output.txt
+          grep -q "Total matches: 2" output.txt
+
+          printf "C++\n" | ./findit | tee output.txt
+          grep -q "Total matches: 3" output.txt
+
+          printf "data\n" | ./findit | tee output.txt
+          grep -q "Total matches: 2" output.txt
