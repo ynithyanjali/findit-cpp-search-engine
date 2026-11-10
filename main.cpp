@@ -37,7 +37,7 @@ int main() {
     std::string lowerKeyword = toLower(keyword);
     for (const std::string& document : documents) {
 
-       if (toLower(document).find(lowerKeyword) != std::string::npos) {{
+       if (toLower(document).find(lowerKeyword) != std::string::npos) {
             std::cout << "Found: " << document << "\n";
             matches++;
         }
